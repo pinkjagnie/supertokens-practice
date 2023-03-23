@@ -21,7 +21,18 @@ export const SuperTokensConfig = {
     },
     // recipeList contains all the modules that you want to
     // use from SuperTokens. See the full list here: https://supertokens.com/docs/guides
-    recipeList: [EmailPassword.init(), Session.init()],
+    recipeList: [EmailPassword.init({
+        getRedirectionURL: async (context) => {
+            if (context.action === "SUCCESS") {
+                if (context.redirectToPath !== undefined) {
+                    // we are navigating back to where the user was before they authenticated
+                    return context.redirectToPath;
+                }
+                return "/dashboard";
+            }
+            return undefined;
+        }
+    }), Session.init()],
 };
 
 export const recipeDetails = {
