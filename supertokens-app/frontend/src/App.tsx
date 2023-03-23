@@ -23,7 +23,7 @@ function App() {
                                     /* This protects the "/" route so that it shows
                                   <Home /> only if the user is logged in.
                                   Else it redirects the user to "/auth" */
-                                    <SessionAuth onSessionExpired={() => {console.log('session expired')}}>
+                                    <SessionAuth>
                                         <Home />
                                     </SessionAuth>
                                 }
