@@ -24,22 +24,11 @@ export const SuperTokensConfig = {
     recipeList: [EmailPassword.init({
         signInAndUpFeature: {
             signUpForm: {
-                formFields: [{
-                    id: "name",
-                    label: "Full name",
-                    placeholder: "First name and last name"
-                }, {
-                    id: "age",
-                    label: "Your age",
-                    placeholder: "How old are you?",
-                }, {
-                    id: "country",
-                    label: "Your country",
-                    placeholder: "Where do you live?",
-                    optional: true
-                }]
+                termsOfServiceLink: "https://example.com/terms-of-service",
+                privacyPolicyLink: "https://example.com/privacy-policy"
             }
-    }}), Session.init()],
+        }
+    }), Session.init()],
 };
 
 export const recipeDetails = {
