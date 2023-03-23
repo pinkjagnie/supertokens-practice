@@ -23,9 +23,12 @@ export const SuperTokensConfig = {
     // use from SuperTokens. See the full list here: https://supertokens.com/docs/guides
     recipeList: [EmailPassword.init({
         signInAndUpFeature: {
-            signUpForm: {
-                termsOfServiceLink: "https://example.com/terms-of-service",
-                privacyPolicyLink: "https://example.com/privacy-policy"
+            signInForm: {
+                formFields: [{
+                    id: "email",
+                    label: "customFieldName",
+                    placeholder: "Custom value"
+                }]
             }
         }
     }), Session.init()],
