@@ -24,7 +24,6 @@ export const SuperTokensConfig: TypeInput = {
         appName: "SuperTokens Demo App",
         apiDomain: getApiDomain(),
         websiteDomain: getWebsiteDomain(),
-        websiteBasePath: "/authentication"
     },
     // recipeList contains all the modules that you want to
     // use from SuperTokens. See the full list here: https://supertokens.com/docs/guides
